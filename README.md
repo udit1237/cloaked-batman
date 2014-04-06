@@ -23,7 +23,7 @@ All data collected by Research and Innovative Technology Administration
 
 Goals:
 
-	We are attempting to recreate the US airport network, and simulate the effects on air traffic congestion if heavily used nodes, or networks of nodes, were to be taken offline. We will be calculating the centrality of each node and calculate that how does the removal of a node or network would affect the centrality of the system.
+We are attempting to recreate the US airport network, and simulate the effects on air traffic congestion if heavily used nodes, or networks of nodes, were to be taken offline. We will be calculating the centrality of each node and calculate that how does the removal of a node or network would affect the centrality of the system.
 
 
 
