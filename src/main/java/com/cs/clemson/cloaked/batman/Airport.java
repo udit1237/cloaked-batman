@@ -1,6 +1,8 @@
 
 package com.cs.clemson.cloaked.batman;
 
+import java.util.HashMap;
+
 /**
  *
  * @author emmanueljohn
@@ -13,8 +15,7 @@ public class Airport {
     private String country;
     private double latitude;
     private double longitude;
-    private int incomingCount;
-    private int outgoingCount;
+    private HashMap<String, Integer> flights = new HashMap<String, Integer>();
     
     public Airport(){
         
@@ -26,20 +27,8 @@ public class Airport {
         this.longitude = longitude;
     }
 
-    public int getIncomingCount() {
-        return incomingCount;
-    }
-
-    public void setIncomingCount(int incomingCount) {
-        this.incomingCount = incomingCount;
-    }
-
-    public int getOutgoingCount() {
-        return outgoingCount;
-    }
-
-    public void setOutgoingCount(int outgoingCount) {
-        this.outgoingCount = outgoingCount;
+    public HashMap<String, Integer> getFlights() {
+        return flights;
     }
     
     public String getIata() {
@@ -97,7 +86,15 @@ public class Airport {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
-
+    
+    public void addFlight(String iata){
+        if(flights.containsKey(iata)){
+            flights.put(iata, flights.get(iata)+1);
+        }else{
+            flights.put(iata, 1);
+        }
+    }
+   
     @Override
     public int hashCode() {
         int hash = 3;
